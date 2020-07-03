@@ -1,0 +1,83 @@
+main#landing {
+  section {
+    &#banner {
+      .banner {
+        &-item {
+          height: 100vh;
+          display: flex !important;
+          align-items: center;
+          position: relative;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($primary, 0.5);
+          }
+        }
+        &-title {
+          color: $white;
+          small {
+            color: $secondary;
+            display: block;
+          }
+        }
+      }
+    }
+    &#about {
+      @include media-breakpoint-up(md) {
+        .about {
+          &-img {
+            border-radius: $border-radius-lg;
+            box-shadow: $box-shadow-sm;
+          }
+        }
+      }
+    }
+    &#services {
+      .nav {
+        margin: 0 -10px;
+        &-item {
+          padding: 0 10px;
+        }
+        &-link {
+          background-color: $white;
+          color: $body-color;
+          &.active {
+            background-color: $light;
+          }
+        }
+        &-large {
+          margin: 0;
+          .nav {
+            &-item {
+              padding: 0;
+              flex-basis: 0;
+              flex-grow: 1;
+            }
+            &-link {
+              text-align: center;
+              background-color: $primary-dark;
+              color: $white;
+              small {
+                display: block;
+              }
+              strong {
+                color: $secondary;
+              }
+              &.active {
+                background-color: $secondary;
+                color: $primary-dark;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

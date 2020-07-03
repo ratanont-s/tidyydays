@@ -1,6 +1,20 @@
 $(function () {
+    'use strict'
+
+    // Offcanvas
+    $('[data-toggle="offcanvas"]').on('click', function () {
+      $('.offcanvas-collapse').toggleClass('open')
+    })
+
+    // Banner
+    $("#banner .banner").slick({
+        arrows: false,
+        dots: true,
+    });
+
     // Slider
     $(".slider").slick({
+        arrows: false,
         rows: 2,
         slidesPerRow: 3,
         // the magic

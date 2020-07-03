@@ -1,0 +1,15 @@
+// Colors
+$primary: #0890FA;
+$primary-light: #D8EEFF;
+$primary-dark: #016FBB;
+$secondary: #FFCA1A;
+$light: #E5F4FF;
+
+$theme-colors: (
+  "primary-light": $primary-light,
+  "primary-dark": $primary-dark,
+);
+
+// Fonts
+$font-family-base: 'Kanit', sans-serif;
+$enable-responsive-font-sizes: true;
