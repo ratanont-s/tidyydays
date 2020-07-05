@@ -1,0 +1,84 @@
+// Check
+.list-check {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        position: relative;
+        padding-left: calc(36px + 1rem);
+        margin-bottom: 1.25rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background: url('../img/icon-check.svg') no-repeat center center/contain;
+        }
+    }
+
+    &-white {
+        li {
+            &::before {
+                background: url('../img/icon-check-white.svg') no-repeat center center/contain;
+            }
+        }
+    }
+}
+
+// Note
+.list-note {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        position: relative;
+        padding-left: calc(36px + 1rem);
+        margin-bottom: 1.25rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background: url('../img/icon-error.svg') no-repeat center center/contain;
+        }
+    }
+}
+
+// Contact
+.list-contact {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        display: flex;
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        a {
+            color: $body-color;
+        }
+    }
+}
+
+// Footer
+.list-footer {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        margin-bottom: 15px;
+    }
+}

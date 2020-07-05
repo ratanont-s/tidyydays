@@ -3,18 +3,21 @@ $(function () {
 
     // Offcanvas
     $('[data-toggle="offcanvas"]').on('click', function () {
-      $('.offcanvas-collapse').toggleClass('open')
+        $('.offcanvas-collapse').toggleClass('open')
     })
 
     // Banner
     $("#banner .banner").slick({
         arrows: false,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 1000,
     });
 
     // Slider
-    $(".slider").slick({
-        arrows: false,
+    $("#works .works").slick({
+        arrows: true,
         rows: 2,
         slidesPerRow: 3,
         // the magic
@@ -32,6 +35,8 @@ $(function () {
             settings: {
                 rows: 1,
                 slidesPerRow: 2,
+                arrows: false,
+                centerMode: true,
             }
 
         }, {
@@ -40,6 +45,8 @@ $(function () {
             settings: {
                 rows: 1,
                 slidesPerRow: 1,
+                arrows: false,
+                centerMode: true
             }
         }]
     });

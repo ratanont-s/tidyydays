@@ -1,5 +1,77 @@
-.navbar{
-    @include media-breakpoint-down(md){
+.navbar {
+    .navbar-nav {
+
+        .show>.nav-link,
+        .active>.nav-link,
+        .nav-link.show,
+        .nav-link.active {
+            font-weight: 600;
+        }
+    }
+
+    .dropdown {
+        &-lang {
+            .dropdown {
+                &-toggle {
+                    font-weight: 600;
+                    color: $body-color;
+                    padding: 0.5rem;
+
+                    &:after {
+                        display: none;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: $light;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: column;
+        align-items: initial;
+        padding: 0;
+
+        &-top {
+            background-color: $white;
+            padding: .5rem 0;
+        }
+
+        .navbar-nav {
+            .nav-item {
+                &:not(:first-child) {
+                    .nav-link {
+                        padding-left: 1.5rem;
+                    }
+                }
+
+                &:not(:nth-last-child(2)) {
+                    .nav-link {
+                        padding-right: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &-top {
+            display: none;
+        }
+
+        .navbar-nav {
+
+            .nav {
+                &-link {
+                    padding: .75rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
         .offcanvas-collapse {
             position: fixed;
             top: 86px;
@@ -14,11 +86,12 @@
             transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
             transition: transform .3s ease-in-out, visibility .3s ease-in-out;
             transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+
             &.open {
                 visibility: visible;
                 -webkit-transform: translateX(-100%);
                 transform: translateX(-100%);
-              }
-          }
+            }
+        }
     }
 }

@@ -1,0 +1,15 @@
+footer {
+    background-color: $primary;
+    color: $white;
+    padding: 50px 0;
+
+    .footer {
+        &-copyright {
+            color: rgba(white, .5);
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
+}

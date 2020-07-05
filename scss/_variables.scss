@@ -5,11 +5,26 @@ $primary-dark: #016FBB;
 $secondary: #FFCA1A;
 $light: #E5F4FF;
 
-$theme-colors: (
-  "primary-light": $primary-light,
+$theme-colors: ("primary-light": $primary-light,
   "primary-dark": $primary-dark,
 );
 
 // Fonts
-$font-family-base: 'Kanit', sans-serif;
+$font-family-base: 'Kanit',
+sans-serif;
+$headings-font-weight: 600;
 $enable-responsive-font-sizes: true;
+
+// Navbar
+$navbar-dark-color: white;
+$navbar-dark-active-color: $secondary;
+
+// Borders
+$border-radius: .5rem;
+$border-radius-lg: .75rem;
+$border-radius-sm: .25rem;
+
+// Forms
+$input-border-width: 0;
+$input-bg: rgba($primary, .1);
+$input-placeholder-color: rgba(black, .3);
