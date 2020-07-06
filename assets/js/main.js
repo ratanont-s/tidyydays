@@ -50,4 +50,20 @@ $(function () {
             }
         }]
     });
+
+    $('#services1 .nav-next').click(function () {
+        $('#services1 .nav .active').parent().next('li').find('a').trigger('click');
+    });
+
+    $('#services1 .nav-prev').click(function () {
+        $('#services1 .nav .active').parent().prev('li').find('a').trigger('click');
+    });
+
+    $('#services3 .nav-next').click(function () {
+        $('#services3 .nav .active').parent().next('li').find('a').trigger('click');
+    });
+
+    $('#services3 .nav-prev').click(function () {
+        $('#services3 .nav .active').parent().prev('li').find('a').trigger('click');
+    });
 });

@@ -175,6 +175,21 @@ main#landing {
           }
         }
 
+        &-prev,
+        &-next {
+          display: block;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+          }
+
+          &.disable {
+            pointer-events: none;
+            opacity: 0.25;
+          }
+        }
+
         &-light {
           .nav {
             &-link {
@@ -227,6 +242,12 @@ main#landing {
           &-item {
             flex-basis: 0;
             flex-grow: 1;
+          }
+
+          &-link {
+            &:hover {
+              background-color: $secondary;
+            }
           }
         }
       }
