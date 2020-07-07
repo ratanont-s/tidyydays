@@ -1,10 +1,18 @@
 $(function () {
     'use strict'
 
+    var width = window.innerWidth;
+    if (width < 992) {
+        $('.offcanvas-collapse .nav-link').on('click', function () {
+            $('.offcanvas-collapse').toggleClass('open')
+        });
+    }
+
     // Offcanvas
     $('[data-toggle="offcanvas"]').on('click', function () {
         $('.offcanvas-collapse').toggleClass('open')
-    })
+    });
+
 
     // Banner
     $("#banner .banner").slick({
@@ -66,4 +74,8 @@ $(function () {
     $('#services3 .nav-prev').click(function () {
         $('#services3 .nav .active').parent().prev('li').find('a').trigger('click');
     });
+});
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+    header: '[data-scroll-header]'
 });
